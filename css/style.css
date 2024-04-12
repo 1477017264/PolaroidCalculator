@@ -1,0 +1,219 @@
+*,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	background-color: #aaa;
+	background-image: radial-gradient(ellipse at center, #f3f4f8 30%, #ccd1e1 100%);
+	font-family: 'PT Sans', Futura, "Trebuchet MS", Arial, sans-serif;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+
+.main {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+#serialNumber {
+	width: 240px;
+	border: none;
+	border-radius: 20px 0 0 20px;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	color: inherit;
+	background: none;
+	font-size: 17px;
+	letter-spacing: 2px;
+	margin: 2px 0 2px 2px;
+	overflow: hidden;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.btn-container{
+	position: relative;
+	overflow: hidden;
+	/* box-shadow: 2px 1.5px 7.5px 0.5px gray; */
+	border-radius: 0 50px 50px 0;
+	z-index: 2;
+}
+
+#submit {
+	position: relative;
+	background-color: transparent;
+	width: 100px;
+	height: 44px;
+	padding: 0px 10px;
+	font-size: 17px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border: none;
+	transition: 1s;
+	color: black;
+}
+
+.strip-1,.strip-2,.strip-3,.strip-4,.strip-5{
+	height: 250px;
+	width: 20px;
+	z-index: -1;
+	position: absolute;
+}
+
+.strip-1{
+	transition: 1s;
+	background-color: #ff351f;
+	transform: rotate(-45deg) translate(-53px,0);
+}
+
+.strip-2{
+	transition: 1s;
+	top: -25px;
+	left: 10px;
+	transform: rotate(-45deg) translate(-58px,15px);
+	background-color: #ff8500;
+}
+
+.strip-3{
+	transition: 1s;
+	top: -50px;
+	left: 20px;
+	transform: rotate(-45deg) translate(-63px,30px);
+	background-color: #ffb600;
+}
+.strip-4{
+	transition: 1s;
+	top: -75px;
+	left: 30px;
+	transform: rotate(-45deg) translate(-68px,45px);
+	background-color: #44be01;
+}
+.strip-5{
+	transition: 1s;
+	top: -100px;
+	left: 40px;
+	transform: rotate(-45deg) translate(-73px,60px);
+	background-color: #008bdc;
+}
+
+#submit:hover{
+	color: white;
+	cursor: pointer;
+}
+
+#submit::before{
+	content: '';
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	opacity: 0;
+	transition: 1s;
+}
+
+#submit:hover::before{
+	opacity: 0.1;
+}
+
+.btn-container:hover .strip-1{
+	transform: rotate(-45deg) translate(58px,0);
+}
+.btn-container:hover .strip-2{
+	transform: rotate(-45deg) translate(53px,5px);
+}
+.btn-container:hover .strip-3{
+	transform: rotate(-45deg) translate(48px,10px);
+}
+.btn-container:hover .strip-4{
+	transform: rotate(-45deg) translate(43px,15px);
+}
+.btn-container:hover .strip-5{
+	transform: rotate(-45deg) translate(38px,20px);
+}
+
+.textBox {
+	border-radius: 50px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 65px;
+	box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.15),
+		-8px -8px 12px 0 rgba(255, 255, 255, 0.5);
+
+}
+
+.film {
+	width: 300px;
+	height: 364px;
+	background: #fff;
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	border-radius: 2px;
+	box-shadow: 10px 10px 60px -25px;
+	overflow: hidden;
+}
+
+.outputBox {
+	width: 269px;
+	height: 269px;
+	margin-top: 15.5px;
+	background-image: url(https://picsum.photos/269);
+	z-index: 0;
+}
+
+#show {
+	position: absolute;
+	margin-top: 15.5px;
+	z-index: 5;
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+	color: white;
+	font-size: 1em;
+	letter-spacing: 5px;
+	width: 269px;
+	height: 269px;
+	display: flex;
+	background-size: 100%;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.logoBox {
+	display: inline-flex;
+}
+
+.logo {
+	width: 100%;
+}
